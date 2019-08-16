@@ -1,4 +1,4 @@
-gig<h1>My cocktails bitch </h1>
+<h1>My cocktails bitch </h1>
 
 <p>
 <% @cocktails.each do |cocktail| %>
@@ -7,5 +7,7 @@ gig<h1>My cocktails bitch </h1>
 <% end %>
 <%=  link_to "New", new_cocktail_path %>
 
+<%=cl_image_tag("rjg0xaklfwyfyulfsd5p",
+      width: 400, height: 300, crop: :fit) %>
 
 </p>
