@@ -1,13 +1,18 @@
-<h1>My cocktails bitch </h1>
+<h1>My cocktails bitch <%=  link_to "New", new_cocktail_path %> </h1>
 
 <p>
 <% @cocktails.each do |cocktail| %>
-<li> <%= cocktail.name %> </li>
-<%=  link_to "Show", cocktail_path(cocktail) %>
+  <div class="card-product">
+   <%=cl_image_tag("rjg0xaklfwyfyulfsd5p",
+        width: 400, height: 300, crop: :fit) %>
+    <div class="card-product-infos">
+      <h2><%= cocktail.name %> </h2>
+      <%=  link_to "Show", cocktail_path(cocktail) %>
+      <%=  link_to "Delete my precious", cocktail_path(cocktail), method: :delete %>
+
+    </div>
+  </div>
 <% end %>
-<%=  link_to "New", new_cocktail_path %>
-
-<%=cl_image_tag("rjg0xaklfwyfyulfsd5p",
-      width: 400, height: 300, crop: :fit) %>
-
 </p>
+
+
